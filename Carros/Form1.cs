@@ -27,35 +27,37 @@ namespace Carros
 
         private void button3_Click(object sender, EventArgs e)
         {
-            textBox6.Text = "";
-            textBox9.Text = "";
-            textBox10.Text = "";
-            textBox11.Text = "";
+            int count = 0;
 
             foreach (Control c in Controls)
             {
-                if (c is System.Windows.Forms.ComboBox)
+                if (c is System.Windows.Forms.TextBox && c != textBox1)
                 {
-                    ((System.Windows.Forms.ComboBox)c).SelectedIndex = -1;
+                    System.Windows.Forms.TextBox tb = (System.Windows.Forms.TextBox)c;
+                    if (!string.IsNullOrEmpty(tb.Text))
+                    {
+                        tb.Text = "";
+                        count++;
+                    }
                 }
 
-                if (c is CheckBox)
+                if (c is System.Windows.Forms.ComboBox)
                 {
-                    CheckBox cb = (CheckBox)c;
-                    if (cb.Checked == false)
+                    System.Windows.Forms.ComboBox cb = (System.Windows.Forms.ComboBox)c;
+                    if (cb.SelectedIndex != -1)
                     {
-                        cb.Checked = false;
-
-                    }
-                    else
-                    {
-                        cb.Checked = false;
-
+                        cb.SelectedIndex = -1;
+                        count++;
                     }
                 }
             }
-        }
 
+            if (count == 0)
+            {
+                MessageBox.Show("Nenhum campo para ser limpo.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
         private void button4_Click(object sender, EventArgs e)
         {
             foreach (Control c in Controls)
@@ -104,7 +106,9 @@ namespace Carros
             {
                 comboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             }
-            
+
+            //Para não deixar selecionar a textBox do Id(código)              
+            textBox1.Enabled = false;            
         }
 
 
@@ -268,5 +272,12 @@ namespace Carros
         {
             lastPoint = new Point(e.X, e.Y);
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+       
     }
 }
