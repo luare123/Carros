@@ -197,50 +197,38 @@ namespace Carros
                 string.IsNullOrWhiteSpace(textBox9.Text) ||
                 string.IsNullOrWhiteSpace(textBox10.Text) ||
                 string.IsNullOrWhiteSpace(textBox11.Text))
-            {               
+            {
                 MessageBox.Show("Por favor, preencha todos os campos antes de prosseguir.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            string txtTextBox1 = textBox1.Text;
-            string txtComboBox2 = comboBox2.Text;
-            string txtComboBox3 = comboBox3.Text;
-            string txtComboBox4 = comboBox4.Text;
-            string txtComboBox5 = comboBox5.Text;
-            string txtTextBox6 = textBox6.Text;
-            string txtComboBox7 = comboBox7.Text;
-            string txtComboBox8 = comboBox8.Text;
-            string txtTextBox9 = textBox9.Text;
-            string txtTextBox10 = textBox10.Text;
-            string txtTextBox11 = textBox11.Text;
 
             DataGridViewRow novaLinha = new DataGridViewRow();
 
             novaLinha.CreateCells(dataGridView1);
-            novaLinha.Cells[0].Value = txtTextBox1;
-            novaLinha.Cells[1].Value = txtComboBox2;
-            novaLinha.Cells[2].Value = txtComboBox3;
-            novaLinha.Cells[3].Value = txtComboBox4;
-            novaLinha.Cells[4].Value = txtComboBox5;
-            novaLinha.Cells[5].Value = txtTextBox6;
-            novaLinha.Cells[6].Value = txtComboBox7;
-            novaLinha.Cells[7].Value = txtComboBox8;
-            novaLinha.Cells[8].Value = txtTextBox9;
-            novaLinha.Cells[9].Value = txtTextBox10;
-            novaLinha.Cells[15].Value = txtTextBox11;
+            novaLinha.Cells[0].Value = textBox1.Text;
+            novaLinha.Cells[1].Value = comboBox2.Text;
+            novaLinha.Cells[2].Value = comboBox3.Text;
+            novaLinha.Cells[3].Value = comboBox4.Text;
+            novaLinha.Cells[4].Value = comboBox5.Text;
+            novaLinha.Cells[5].Value = textBox6.Text;
+            novaLinha.Cells[6].Value = comboBox7.Text;
+            novaLinha.Cells[7].Value = comboBox8.Text;
+            novaLinha.Cells[8].Value = textBox9.Text;
+            novaLinha.Cells[9].Value = textBox10.Text;
+            novaLinha.Cells[10].Value = checkBox1.Checked;
+            novaLinha.Cells[11].Value = checkBox2.Checked;
+            novaLinha.Cells[12].Value = checkBox3.Checked;
+            novaLinha.Cells[13].Value = checkBox4.Checked;
+            novaLinha.Cells[15].Value = textBox11.Text;
 
             dataGridView1.Rows.Add(novaLinha);
 
             int currentNumber;
-            if (!int.TryParse(txtTextBox1, out currentNumber))
+            if (!int.TryParse(textBox1.Text, out currentNumber))
             {
-                currentNumber = 1;
+                currentNumber = 0;
             }
             textBox1.Text = (currentNumber + 1).ToString();
-
-        }
-
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
         }
     }
