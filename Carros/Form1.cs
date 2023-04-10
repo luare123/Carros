@@ -79,9 +79,27 @@ namespace Carros
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // Definir as propriedades WrapMode e AutoSizeRowsMode para as células que podem ser multi linha
+            for (int i = 0; i <= 10; i++)
+            {
+                dataGridView1.Columns[i].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+                dataGridView1.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            }
+
+            // Pular as próximas 5 células e definir as propriedades WrapMode e AutoSizeRowsMode para a célula seguinte
+            int j = 11;
+            if (j >= 0 && j < dataGridView1.Columns.Count)
+            {
+                dataGridView1.Columns[j].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+                dataGridView1.Columns[j].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            }
+            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;        
+
+            //Botão de "certinho" flat
             button4.FlatStyle = FlatStyle.Flat;
             button4.FlatAppearance.BorderSize = 0;
 
+            //Deixar as comboBox bonitinha
             foreach (var comboBox in this.Controls.OfType<System.Windows.Forms.ComboBox>())
             {
                 comboBox.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -151,11 +169,6 @@ namespace Carros
             textBox6.MaxLength = 4;
         }
 
-        private void textBox7_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void textBox9_TextChanged(object sender, EventArgs e)
         {
             textBox9.MaxLength = 17;
@@ -178,25 +191,11 @@ namespace Carros
         {
             textBox11.MaxLength = 256;
         }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
         
         private void button2_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(textBox1.Text) ||
-                comboBox2.SelectedItem == null ||
-                comboBox3.SelectedItem == null ||
-                comboBox4.SelectedItem == null ||
-                comboBox5.SelectedItem == null ||
-                string.IsNullOrWhiteSpace(textBox6.Text) ||
-                comboBox7.SelectedItem == null ||
-                comboBox8.SelectedItem == null ||
-                string.IsNullOrWhiteSpace(textBox9.Text) ||
-                string.IsNullOrWhiteSpace(textBox10.Text) ||
-                string.IsNullOrWhiteSpace(textBox11.Text))
+            if (!Controls.OfType<System.Windows.Forms.TextBox>().All(tb => !string.IsNullOrWhiteSpace(tb.Text)) ||
+            !Controls.OfType<System.Windows.Forms.ComboBox>().All(cb => cb.SelectedItem != null))
             {
                 MessageBox.Show("Por favor, preencha todos os campos antes de prosseguir.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -219,7 +218,9 @@ namespace Carros
             novaLinha.Cells[11].Value = checkBox2.Checked;
             novaLinha.Cells[12].Value = checkBox3.Checked;
             novaLinha.Cells[13].Value = checkBox4.Checked;
-            novaLinha.Cells[15].Value = textBox11.Text;
+            novaLinha.Cells[14].Value = checkBox5.Checked;
+            novaLinha.Cells[15].Value = checkBox6.Checked;
+            novaLinha.Cells[16].Value = textBox11.Text;
 
             dataGridView1.Rows.Add(novaLinha);
 
@@ -230,6 +231,42 @@ namespace Carros
             }
             textBox1.Text = (currentNumber + 1).ToString();
 
+            MessageBox.Show("Operação feita com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
+
+        private Point lastMousePosition;
+        private void Form1_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastMousePosition = Control.MousePosition;
+        }
+
+        private void Form1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                Point delta = new Point(
+                    Control.MousePosition.X - lastMousePosition.X,
+                    Control.MousePosition.Y - lastMousePosition.Y
+                );
+                Location = new Point(Location.X + delta.X, Location.Y + delta.Y);
+                lastMousePosition = Control.MousePosition;
+            }
+        }
+
+        private Point lastPoint;
+        private void pictureBox2_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - lastPoint.X;
+                this.Top += e.Y - lastPoint.Y;
+            }
+        }
+
+        private void pictureBox2_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastPoint = new Point(e.X, e.Y);
         }
     }
 }
