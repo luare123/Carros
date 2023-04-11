@@ -54,7 +54,7 @@ namespace Carros
 
             if (count == 0)
             {
-                MessageBox.Show("Nenhum campo para ser limpo.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Nenhum campo foi preenchido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -81,6 +81,9 @@ namespace Carros
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // Define o valor inicial do ID como 1
+            textBox1.Text = "1";
+
             // Definir as propriedades WrapMode e AutoSizeRowsMode para as células que podem ser multi linha
             for (int i = 0; i <= 10; i++)
             {
@@ -160,14 +163,6 @@ namespace Carros
             }
         }
 
-        private void textBox9_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
-            {
-                { e.Handled = true; }
-            }
-        }
-
         private void textBox6_TextChanged(object sender, EventArgs e)
         {
             textBox6.MaxLength = 4;
@@ -195,18 +190,34 @@ namespace Carros
         {
             textBox11.MaxLength = 256;
         }
-        
+
         private void button2_Click(object sender, EventArgs e)
         {
-            if (!Controls.OfType<System.Windows.Forms.TextBox>().All(tb => !string.IsNullOrWhiteSpace(tb.Text)) ||
-            !Controls.OfType<System.Windows.Forms.ComboBox>().All(cb => cb.SelectedItem != null))
+            // Verifica se todos os campos obrigatórios foram preenchidos
+            if (!Controls.OfType<System.Windows.Forms.TextBox>().Where(tb => tb != textBox11 && tb != textBox1).All(tb => !string.IsNullOrWhiteSpace(tb.Text)) ||
+                !Controls.OfType<System.Windows.Forms.ComboBox>().All(cb => cb.SelectedItem != null))
             {
-                MessageBox.Show("Por favor, preencha todos os campos antes de prosseguir.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Por favor, preencha todos os campos obrigatórios antes de prosseguir.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            DataGridViewRow novaLinha = new DataGridViewRow();
+            // Verifica se o campo do número do chassi tem no mínimo 17 caracteres
+            if (textBox9.Text.Length < 17)
+            {
+                MessageBox.Show("O número do chassi deve ter pelo menos 17 caracteres.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
+            // Verifica se o valor digitado na caixa de texto é um ano válido
+            int ano;
+            if (!int.TryParse(textBox6.Text, out ano) || ano > DateTime.Now.Year || ano < 1886)
+            {
+                MessageBox.Show("O ano inserido é inválido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Cria uma nova linha na dataGridView
+            DataGridViewRow novaLinha = new DataGridViewRow();
             novaLinha.CreateCells(dataGridView1);
             novaLinha.Cells[0].Value = textBox1.Text;
             novaLinha.Cells[1].Value = comboBox2.Text;
@@ -226,17 +237,18 @@ namespace Carros
             novaLinha.Cells[15].Value = checkBox6.Checked;
             novaLinha.Cells[16].Value = textBox11.Text;
 
+            // Adiciona a nova linha à dataGridView
             dataGridView1.Rows.Add(novaLinha);
 
+            // Incrementa o valor do número atual
             int currentNumber;
             if (!int.TryParse(textBox1.Text, out currentNumber))
             {
-                currentNumber = 0;
+                currentNumber = 1;
             }
             textBox1.Text = (currentNumber + 1).ToString();
 
             MessageBox.Show("Operação feita com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
         }
 
         private Point lastMousePosition;
@@ -278,6 +290,23 @@ namespace Carros
             this.WindowState = FormWindowState.Minimized;
         }
 
-       
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Selecione uma linha para excluir.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            int rowIndex = dataGridView1.SelectedRows[0].Index;
+            dataGridView1.Rows.RemoveAt(rowIndex);
+
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            {
+                dataGridView1.Rows[i].Cells[0].Value = (i + 1).ToString();
+            }
+
+            MessageBox.Show("Carro removido com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);                       
+        }
     }
 }
