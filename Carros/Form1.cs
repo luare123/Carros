@@ -100,7 +100,7 @@ namespace Carros
             }
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;        
 
-            //Botão de "certinho" flat
+            //Botão de "certinho" das checkbox, flat
             button4.FlatStyle = FlatStyle.Flat;
             button4.FlatAppearance.BorderSize = 0;
 
@@ -248,7 +248,7 @@ namespace Carros
             }
             textBox1.Text = (currentNumber + 1).ToString();
 
-            MessageBox.Show("Operação feita com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Cadastro feito com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private Point lastMousePosition;
@@ -294,7 +294,7 @@ namespace Carros
         {
             if (dataGridView1.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Selecione uma linha para excluir.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Selecione uma linha de cadastro para excluir.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
