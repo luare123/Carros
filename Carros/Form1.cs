@@ -306,7 +306,7 @@ namespace Carros
                 dataGridView1.Rows[i].Cells[0].Value = (i + 1).ToString();
             }
 
-            MessageBox.Show("Carro removido com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);                       
+            MessageBox.Show("Cadastro removido com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);                       
         }
     }
 }
