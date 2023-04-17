@@ -72,7 +72,7 @@ namespace Carros
             }
             else
             {
-               MessageBox.Show("Campos limpos!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Campos limpos!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
         }
@@ -116,7 +116,7 @@ namespace Carros
                 dataGridView1.Columns[j].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
                 dataGridView1.Columns[j].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             }
-            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;        
+            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
 
             //Botão de "certinho" das checkbox, flat
             button4.FlatStyle = FlatStyle.Flat;
@@ -129,7 +129,7 @@ namespace Carros
             }
 
             //Para não deixar selecionar a textBox do Id(código)              
-            textBox1.Enabled = false;            
+            textBox1.Enabled = false;
         }
 
 
@@ -324,8 +324,95 @@ namespace Carros
                 dataGridView1.Rows[i].Cells[0].Value = (i + 1).ToString();
             }
 
-            MessageBox.Show("Cadastro removido com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);                       
+            MessageBox.Show("Cadastro removido com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        private void button7_Click(object sender, EventArgs e)
+        {
+            string newItem = Microsoft.VisualBasic.Interaction.InputBox("Digite a marca do seu carro:", "Adicionar item");
+            if (!string.IsNullOrEmpty(newItem))
+            {
+                if (comboBox2.Items.Cast<string>().Any(item => string.Equals(item, newItem, StringComparison.CurrentCultureIgnoreCase)))
+                {
+                    MessageBox.Show("O item já existe na lista.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    comboBox2.Items.Add(newItem);
+                    comboBox2.SelectedItem = newItem;
+                    MessageBox.Show("O item foi adicionado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            string newItem = Microsoft.VisualBasic.Interaction.InputBox("Digite o modelo do seu carro:", "Adicionar item");
+            if (!string.IsNullOrEmpty(newItem))
+            {            
+                if (comboBox3.Items.Cast<string>().Any(item => string.Equals(item, newItem, StringComparison.CurrentCultureIgnoreCase)))
+                {                
+                    MessageBox.Show("O item já existe na lista.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    comboBox3.Items.Add(newItem);
+                    comboBox3.SelectedItem = newItem;
+                    MessageBox.Show("O item foi adicionado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            string newItem = Microsoft.VisualBasic.Interaction.InputBox("Digite o fabricante do seu carro:", "Adicionar item");
+            if (!string.IsNullOrEmpty(newItem))
+            {              
+                if (comboBox4.Items.Cast<string>().Any(item => string.Equals(item, newItem, StringComparison.CurrentCultureIgnoreCase)))
+                { 
+                    MessageBox.Show("O item já existe na lista.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    comboBox4.Items.Add(newItem);
+                    comboBox4.SelectedItem = newItem;
+                    MessageBox.Show("O item foi adicionado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+        private void button10_Click(object sender, EventArgs e)
+        {
+            string newItem = Microsoft.VisualBasic.Interaction.InputBox("Digite o tipo do seu carro:", "Adicionar item");
+            if (!string.IsNullOrEmpty(newItem))
+            {
+                if (comboBox5.Items.Cast<string>().Any(item => string.Equals(item, newItem, StringComparison.CurrentCultureIgnoreCase)))
+                {             
+                    MessageBox.Show("O item já existe na lista.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    comboBox5.Items.Add(newItem);
+                    comboBox5.SelectedItem = newItem;
+                    MessageBox.Show("O item foi adicionado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+        private void button11_Click(object sender, EventArgs e)
+        {
+            string newItem = Microsoft.VisualBasic.Interaction.InputBox("Digite a cor do seu carro:", "Adicionar item");
+            if (!string.IsNullOrEmpty(newItem))
+            {
+                if (comboBox8.Items.Cast<string>().Any(item => string.Equals(item, newItem, StringComparison.CurrentCultureIgnoreCase)))
+                {
+                    MessageBox.Show("O item já existe na lista.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    comboBox8.Items.Add(newItem);
+                    comboBox8.SelectedItem = newItem;
+                    MessageBox.Show("O item foi adicionado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
     }
 }

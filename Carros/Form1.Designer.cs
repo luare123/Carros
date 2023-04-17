@@ -28,24 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle108 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle91 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle92 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle93 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle94 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle95 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle96 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle97 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle98 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle99 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle100 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle101 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle102 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle103 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle104 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle105 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle106 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle107 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -79,19 +79,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
-            this.comboBox8 = new System.Windows.Forms.ComboBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.codigo_veiculo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_veiculo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.modelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fabricante = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -108,6 +96,24 @@
             this.venda = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.particular = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.observacoes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBox7 = new System.Windows.Forms.ComboBox();
+            this.comboBox8 = new System.Windows.Forms.ComboBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -146,7 +152,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Comic Sans MS", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(409, 115);
+            this.label4.Location = new System.Drawing.Point(409, 116);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 29);
             this.label4.TabIndex = 5;
@@ -156,7 +162,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Comic Sans MS", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 296);
+            this.label5.Location = new System.Drawing.Point(12, 293);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(55, 29);
             this.label5.TabIndex = 4;
@@ -176,7 +182,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Comic Sans MS", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(409, 250);
+            this.label7.Location = new System.Drawing.Point(409, 252);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(189, 29);
             this.label7.TabIndex = 8;
@@ -186,7 +192,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Comic Sans MS", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(409, 205);
+            this.label8.Location = new System.Drawing.Point(412, 206);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(46, 29);
             this.label8.TabIndex = 7;
@@ -196,7 +202,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Comic Sans MS", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(409, 160);
+            this.label9.Location = new System.Drawing.Point(409, 161);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(125, 29);
             this.label9.TabIndex = 6;
@@ -215,7 +221,7 @@
             // textBox6
             // 
             this.textBox6.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(611, 115);
+            this.textBox6.Location = new System.Drawing.Point(609, 118);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(168, 30);
             this.textBox6.TabIndex = 14;
@@ -225,7 +231,7 @@
             // textBox9
             // 
             this.textBox9.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(611, 254);
+            this.textBox9.Location = new System.Drawing.Point(609, 253);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(168, 30);
             this.textBox9.TabIndex = 17;
@@ -235,7 +241,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Comic Sans MS", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(409, 294);
+            this.label10.Location = new System.Drawing.Point(409, 297);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(142, 29);
             this.label10.TabIndex = 18;
@@ -381,14 +387,14 @@
             this.textBox11.Multiline = true;
             this.textBox11.Name = "textBox11";
             this.textBox11.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox11.Size = new System.Drawing.Size(347, 106);
+            this.textBox11.Size = new System.Drawing.Size(347, 102);
             this.textBox11.TabIndex = 33;
             this.textBox11.TextChanged += new System.EventHandler(this.textBox11_TextChanged);
             // 
             // textBox10
             // 
             this.textBox10.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.Location = new System.Drawing.Point(611, 298);
+            this.textBox10.Location = new System.Drawing.Point(609, 296);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(168, 30);
             this.textBox10.TabIndex = 26;
@@ -428,7 +434,7 @@
             this.button3.BackColor = System.Drawing.Color.Silver;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(1194, 262);
+            this.button3.Location = new System.Drawing.Point(1194, 259);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(117, 32);
             this.button3.TabIndex = 36;
@@ -455,7 +461,7 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.codigo_veiculo,
+            this.id_veiculo,
             this.marca,
             this.modelo,
             this.fabricante,
@@ -472,19 +478,169 @@
             this.venda,
             this.particular,
             this.observacoes});
-            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle36.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle36.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle36.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle36.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle36.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle36.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle36;
+            dataGridViewCellStyle108.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle108.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle108.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle108.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle108.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle108.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle108.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle108;
             this.dataGridView1.Location = new System.Drawing.Point(17, 353);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(1294, 303);
             this.dataGridView1.TabIndex = 38;
+            // 
+            // id_veiculo
+            // 
+            dataGridViewCellStyle91.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.id_veiculo.DefaultCellStyle = dataGridViewCellStyle91;
+            this.id_veiculo.HeaderText = "ID";
+            this.id_veiculo.Name = "id_veiculo";
+            this.id_veiculo.ReadOnly = true;
+            // 
+            // marca
+            // 
+            dataGridViewCellStyle92.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
+            this.marca.DefaultCellStyle = dataGridViewCellStyle92;
+            this.marca.HeaderText = "Marca";
+            this.marca.Name = "marca";
+            this.marca.ReadOnly = true;
+            // 
+            // modelo
+            // 
+            dataGridViewCellStyle93.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modelo.DefaultCellStyle = dataGridViewCellStyle93;
+            this.modelo.HeaderText = "Modelo";
+            this.modelo.Name = "modelo";
+            this.modelo.ReadOnly = true;
+            // 
+            // fabricante
+            // 
+            dataGridViewCellStyle94.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
+            this.fabricante.DefaultCellStyle = dataGridViewCellStyle94;
+            this.fabricante.HeaderText = "Fabricante";
+            this.fabricante.Name = "fabricante";
+            this.fabricante.ReadOnly = true;
+            // 
+            // tipo
+            // 
+            dataGridViewCellStyle95.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
+            this.tipo.DefaultCellStyle = dataGridViewCellStyle95;
+            this.tipo.HeaderText = "Tipo";
+            this.tipo.Name = "tipo";
+            this.tipo.ReadOnly = true;
+            // 
+            // ano
+            // 
+            dataGridViewCellStyle96.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
+            this.ano.DefaultCellStyle = dataGridViewCellStyle96;
+            this.ano.HeaderText = "Ano";
+            this.ano.Name = "ano";
+            this.ano.ReadOnly = true;
+            // 
+            // combustivel
+            // 
+            dataGridViewCellStyle97.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
+            this.combustivel.DefaultCellStyle = dataGridViewCellStyle97;
+            this.combustivel.HeaderText = "Combustível";
+            this.combustivel.Name = "combustivel";
+            this.combustivel.ReadOnly = true;
+            // 
+            // cor
+            // 
+            dataGridViewCellStyle98.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
+            this.cor.DefaultCellStyle = dataGridViewCellStyle98;
+            this.cor.HeaderText = "Cor";
+            this.cor.Name = "cor";
+            this.cor.ReadOnly = true;
+            // 
+            // numerochassi
+            // 
+            dataGridViewCellStyle99.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
+            this.numerochassi.DefaultCellStyle = dataGridViewCellStyle99;
+            this.numerochassi.HeaderText = "NºChassi";
+            this.numerochassi.Name = "numerochassi";
+            this.numerochassi.ReadOnly = true;
+            // 
+            // kilometragem
+            // 
+            dataGridViewCellStyle100.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
+            this.kilometragem.DefaultCellStyle = dataGridViewCellStyle100;
+            this.kilometragem.HeaderText = "Kilometragem";
+            this.kilometragem.Name = "kilometragem";
+            this.kilometragem.ReadOnly = true;
+            // 
+            // revisao
+            // 
+            dataGridViewCellStyle101.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle101.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle101.NullValue = false;
+            this.revisao.DefaultCellStyle = dataGridViewCellStyle101;
+            this.revisao.HeaderText = "Revisão";
+            this.revisao.Name = "revisao";
+            this.revisao.ReadOnly = true;
+            // 
+            // sinistro
+            // 
+            dataGridViewCellStyle102.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle102.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle102.NullValue = false;
+            this.sinistro.DefaultCellStyle = dataGridViewCellStyle102;
+            this.sinistro.HeaderText = "Sinistro";
+            this.sinistro.Name = "sinistro";
+            this.sinistro.ReadOnly = true;
+            // 
+            // roubo_furto
+            // 
+            dataGridViewCellStyle103.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle103.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle103.NullValue = false;
+            this.roubo_furto.DefaultCellStyle = dataGridViewCellStyle103;
+            this.roubo_furto.HeaderText = "Roubo/Furto";
+            this.roubo_furto.Name = "roubo_furto";
+            this.roubo_furto.ReadOnly = true;
+            // 
+            // alugel
+            // 
+            dataGridViewCellStyle104.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle104.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle104.NullValue = false;
+            this.alugel.DefaultCellStyle = dataGridViewCellStyle104;
+            this.alugel.HeaderText = "Aluguel";
+            this.alugel.Name = "alugel";
+            this.alugel.ReadOnly = true;
+            // 
+            // venda
+            // 
+            dataGridViewCellStyle105.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle105.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle105.NullValue = false;
+            this.venda.DefaultCellStyle = dataGridViewCellStyle105;
+            this.venda.HeaderText = "Venda";
+            this.venda.Name = "venda";
+            this.venda.ReadOnly = true;
+            this.venda.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.venda.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // particular
+            // 
+            dataGridViewCellStyle106.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle106.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle106.NullValue = false;
+            this.particular.DefaultCellStyle = dataGridViewCellStyle106;
+            this.particular.HeaderText = "Particular";
+            this.particular.Name = "particular";
+            this.particular.ReadOnly = true;
+            // 
+            // observacoes
+            // 
+            dataGridViewCellStyle107.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
+            this.observacoes.DefaultCellStyle = dataGridViewCellStyle107;
+            this.observacoes.HeaderText = "Observações";
+            this.observacoes.Name = "observacoes";
+            this.observacoes.ReadOnly = true;
             // 
             // comboBox4
             // 
@@ -512,7 +668,6 @@
             "Suzuki",
             "Renault",
             "Stellantis",
-            "",
             "Mitsubishi"});
             this.comboBox4.Location = new System.Drawing.Point(195, 252);
             this.comboBox4.Name = "comboBox4";
@@ -619,11 +774,11 @@
             "Gasolina Comum",
             "Gasolina Aditivada",
             "Gasolina Premium",
-            "Diesel / Variações",
-            "Etanol / Variações",
+            "Diesel",
+            "Etanol",
             "Eletricidade",
             "Gás Natural Veicular"});
-            this.comboBox7.Location = new System.Drawing.Point(611, 160);
+            this.comboBox7.Location = new System.Drawing.Point(609, 160);
             this.comboBox7.Name = "comboBox7";
             this.comboBox7.Size = new System.Drawing.Size(168, 31);
             this.comboBox7.TabIndex = 42;
@@ -633,18 +788,18 @@
             this.comboBox8.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox8.FormattingEnabled = true;
             this.comboBox8.Items.AddRange(new object[] {
-            "Azul / Variações",
-            "Verde / Variações",
-            "Amarelo / Variações",
-            "Roxo / Variações",
-            "Rosa / Variações",
-            "Vermelho / Variações",
-            "Laranja / Variações",
-            "Marrom / Variações",
-            "Cinza / Variações",
-            "Branco / Variações",
-            "Preto / Variações"});
-            this.comboBox8.Location = new System.Drawing.Point(611, 206);
+            "Azul",
+            "Verde",
+            "Amarelo",
+            "Roxo",
+            "Rosa",
+            "Vermelho",
+            "Laranja",
+            "Marrom",
+            "Cinza",
+            "Branco",
+            "Preto"});
+            this.comboBox8.Location = new System.Drawing.Point(609, 206);
             this.comboBox8.Name = "comboBox8";
             this.comboBox8.Size = new System.Drawing.Size(168, 31);
             this.comboBox8.TabIndex = 43;
@@ -668,15 +823,15 @@
             this.comboBox5.Items.AddRange(new object[] {
             "Conversível",
             "Sedã",
-            "Hatch / hatchback",
-            "Coupé / cupê",
-            "Perua / SW",
-            "SUV / Veículo Utilitário Esportivo",
+            "Hatch/hatchback",
+            "Coupé/cupê",
+            "Perua/SW",
+            "SUV/Veículo Utilitário Esportivo",
             "Picape",
             "Minivan",
-            "Van / utilitário",
-            "Buggy / bugre"});
-            this.comboBox5.Location = new System.Drawing.Point(195, 299);
+            "Van/utilitário",
+            "Buggy/bugre"});
+            this.comboBox5.Location = new System.Drawing.Point(195, 296);
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(168, 31);
             this.comboBox5.TabIndex = 45;
@@ -694,7 +849,7 @@
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.Color.DodgerBlue;
+            this.button5.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.Location = new System.Drawing.Point(1231, 12);
@@ -734,163 +889,97 @@
             this.button6.BackColor = System.Drawing.Color.Red;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(1194, 300);
+            this.button6.Location = new System.Drawing.Point(1194, 293);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(117, 32);
+            this.button6.Size = new System.Drawing.Size(117, 33);
             this.button6.TabIndex = 51;
             this.button6.Text = "Excluir Cadastro";
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // codigo_veiculo
+            // button7
             // 
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.codigo_veiculo.DefaultCellStyle = dataGridViewCellStyle19;
-            this.codigo_veiculo.HeaderText = "Código";
-            this.codigo_veiculo.Name = "codigo_veiculo";
-            this.codigo_veiculo.ReadOnly = true;
+            this.button7.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Location = new System.Drawing.Point(369, 166);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(23, 22);
+            this.button7.TabIndex = 52;
+            this.button7.Text = "✚";
+            this.button7.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
-            // marca
+            // button8
             // 
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
-            this.marca.DefaultCellStyle = dataGridViewCellStyle20;
-            this.marca.HeaderText = "Marca";
-            this.marca.Name = "marca";
-            this.marca.ReadOnly = true;
+            this.button8.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.Location = new System.Drawing.Point(369, 212);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(23, 22);
+            this.button8.TabIndex = 53;
+            this.button8.Text = "✚";
+            this.button8.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
-            // modelo
+            // button9
             // 
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modelo.DefaultCellStyle = dataGridViewCellStyle21;
-            this.modelo.HeaderText = "Modelo";
-            this.modelo.Name = "modelo";
-            this.modelo.ReadOnly = true;
+            this.button9.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.Location = new System.Drawing.Point(369, 257);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(23, 22);
+            this.button9.TabIndex = 54;
+            this.button9.Text = "✚";
+            this.button9.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
-            // fabricante
+            // button10
             // 
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
-            this.fabricante.DefaultCellStyle = dataGridViewCellStyle22;
-            this.fabricante.HeaderText = "Fabricante";
-            this.fabricante.Name = "fabricante";
-            this.fabricante.ReadOnly = true;
+            this.button10.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button10.Location = new System.Drawing.Point(369, 302);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(23, 22);
+            this.button10.TabIndex = 55;
+            this.button10.Text = "✚";
+            this.button10.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
-            // tipo
+            // button11
             // 
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
-            this.tipo.DefaultCellStyle = dataGridViewCellStyle23;
-            this.tipo.HeaderText = "Tipo";
-            this.tipo.Name = "tipo";
-            this.tipo.ReadOnly = true;
+            this.button11.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button11.Location = new System.Drawing.Point(783, 212);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(23, 22);
+            this.button11.TabIndex = 56;
+            this.button11.Text = "✚";
+            this.button11.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
-            // ano
+            // button12
             // 
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
-            this.ano.DefaultCellStyle = dataGridViewCellStyle24;
-            this.ano.HeaderText = "Ano";
-            this.ano.Name = "ano";
-            this.ano.ReadOnly = true;
-            // 
-            // combustivel
-            // 
-            dataGridViewCellStyle25.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
-            this.combustivel.DefaultCellStyle = dataGridViewCellStyle25;
-            this.combustivel.HeaderText = "Combustível";
-            this.combustivel.Name = "combustivel";
-            this.combustivel.ReadOnly = true;
-            // 
-            // cor
-            // 
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
-            this.cor.DefaultCellStyle = dataGridViewCellStyle26;
-            this.cor.HeaderText = "Cor";
-            this.cor.Name = "cor";
-            this.cor.ReadOnly = true;
-            // 
-            // numerochassi
-            // 
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
-            this.numerochassi.DefaultCellStyle = dataGridViewCellStyle27;
-            this.numerochassi.HeaderText = "NºChassi";
-            this.numerochassi.Name = "numerochassi";
-            this.numerochassi.ReadOnly = true;
-            // 
-            // kilometragem
-            // 
-            dataGridViewCellStyle28.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
-            this.kilometragem.DefaultCellStyle = dataGridViewCellStyle28;
-            this.kilometragem.HeaderText = "Kilometragem";
-            this.kilometragem.Name = "kilometragem";
-            this.kilometragem.ReadOnly = true;
-            // 
-            // revisao
-            // 
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle29.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle29.NullValue = false;
-            this.revisao.DefaultCellStyle = dataGridViewCellStyle29;
-            this.revisao.HeaderText = "Revisão";
-            this.revisao.Name = "revisao";
-            this.revisao.ReadOnly = true;
-            // 
-            // sinistro
-            // 
-            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle30.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle30.NullValue = false;
-            this.sinistro.DefaultCellStyle = dataGridViewCellStyle30;
-            this.sinistro.HeaderText = "Sinistro";
-            this.sinistro.Name = "sinistro";
-            this.sinistro.ReadOnly = true;
-            // 
-            // roubo_furto
-            // 
-            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle31.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle31.NullValue = false;
-            this.roubo_furto.DefaultCellStyle = dataGridViewCellStyle31;
-            this.roubo_furto.HeaderText = "Roubo/Furto";
-            this.roubo_furto.Name = "roubo_furto";
-            this.roubo_furto.ReadOnly = true;
-            // 
-            // alugel
-            // 
-            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle32.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle32.NullValue = false;
-            this.alugel.DefaultCellStyle = dataGridViewCellStyle32;
-            this.alugel.HeaderText = "Aluguel";
-            this.alugel.Name = "alugel";
-            this.alugel.ReadOnly = true;
-            // 
-            // venda
-            // 
-            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle33.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle33.NullValue = false;
-            this.venda.DefaultCellStyle = dataGridViewCellStyle33;
-            this.venda.HeaderText = "Venda";
-            this.venda.Name = "venda";
-            this.venda.ReadOnly = true;
-            this.venda.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.venda.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // particular
-            // 
-            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle34.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle34.NullValue = false;
-            this.particular.DefaultCellStyle = dataGridViewCellStyle34;
-            this.particular.HeaderText = "Particular";
-            this.particular.Name = "particular";
-            this.particular.ReadOnly = true;
-            // 
-            // observacoes
-            // 
-            dataGridViewCellStyle35.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
-            this.observacoes.DefaultCellStyle = dataGridViewCellStyle35;
-            this.observacoes.HeaderText = "Observações";
-            this.observacoes.Name = "observacoes";
-            this.observacoes.ReadOnly = true;
+            this.button12.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button12.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button12.Location = new System.Drawing.Point(783, 165);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(23, 22);
+            this.button12.TabIndex = 57;
+            this.button12.Text = "✚";
+            this.button12.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button12.UseVisualStyleBackColor = false;
+      
             // 
             // Form1
             // 
@@ -898,6 +987,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.ClientSize = new System.Drawing.Size(1326, 673);
+            this.Controls.Add(this.button12);
+            this.Controls.Add(this.button11);
+            this.Controls.Add(this.button10);
+            this.Controls.Add(this.button9);
+            this.Controls.Add(this.button8);
+            this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.label19);
@@ -1004,7 +1099,7 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codigo_veiculo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_veiculo;
         private System.Windows.Forms.DataGridViewTextBoxColumn marca;
         private System.Windows.Forms.DataGridViewTextBoxColumn modelo;
         private System.Windows.Forms.DataGridViewTextBoxColumn fabricante;
@@ -1021,6 +1116,12 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn venda;
         private System.Windows.Forms.DataGridViewCheckBoxColumn particular;
         private System.Windows.Forms.DataGridViewTextBoxColumn observacoes;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button12;
     }
 }
 
