@@ -414,5 +414,23 @@ namespace Carros
                 }
             }
         }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            string newItem = Microsoft.VisualBasic.Interaction.InputBox("Digite o tipo do combustível do seu carro:", "Adicionar item");
+            if (!string.IsNullOrEmpty(newItem))
+            {
+                if (comboBox7.Items.Cast<string>().Any(item => string.Equals(item, newItem, StringComparison.CurrentCultureIgnoreCase)))
+                {
+                    MessageBox.Show("O item já existe na lista.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    comboBox7.Items.Add(newItem);
+                    comboBox7.SelectedItem = newItem;
+                    MessageBox.Show("O item foi adicionado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
     }
 }
