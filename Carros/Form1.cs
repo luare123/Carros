@@ -18,6 +18,9 @@ namespace Carros
             InitializeComponent();
 
             textBox1.ReadOnly = true;
+            //
+            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Cosmic Sans MS", 10, FontStyle.Bold);
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -50,11 +53,26 @@ namespace Carros
                         count++;
                     }
                 }
+
+                if (c is CheckBox)
+                {
+                    CheckBox chk = (CheckBox)c;
+                    if (chk.Checked)
+                    {
+                        chk.Checked = false;
+                        count++;
+                    }
+                }
+
             }
 
             if (count == 0)
             {
-                MessageBox.Show("Nenhum campo foi preenchido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Nenhum campo preenchido para ser limpo.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+               MessageBox.Show("Campos limpos!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
         }
@@ -308,5 +326,6 @@ namespace Carros
 
             MessageBox.Show("Cadastro removido com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);                       
         }
+
     }
 }
