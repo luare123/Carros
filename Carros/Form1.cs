@@ -211,11 +211,12 @@ namespace Carros
 
         private void button2_Click(object sender, EventArgs e)
         {
+
             // Verifica se todos os campos obrigatórios foram preenchidos
             if (!Controls.OfType<System.Windows.Forms.TextBox>().Where(tb => tb != textBox11 && tb != textBox1).All(tb => !string.IsNullOrWhiteSpace(tb.Text)) ||
                 !Controls.OfType<System.Windows.Forms.ComboBox>().All(cb => cb.SelectedItem != null))
             {
-                MessageBox.Show("Por favor, preencha todos os campos obrigatórios antes de prosseguir.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Preencha todos os campos obrigatórios antes de prosseguir.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -258,6 +259,7 @@ namespace Carros
             // Adiciona a nova linha à dataGridView
             dataGridView1.Rows.Add(novaLinha);
 
+
             // Incrementa o valor do número atual
             int currentNumber;
             if (!int.TryParse(textBox1.Text, out currentNumber))
@@ -268,6 +270,7 @@ namespace Carros
 
             MessageBox.Show("Cadastro feito com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+        
 
         private Point lastMousePosition;
         private void Form1_MouseDown(object sender, MouseEventArgs e)
@@ -310,9 +313,10 @@ namespace Carros
 
         private void button6_Click(object sender, EventArgs e)
         {
+            // Excluir um cadastro da dataGridView
             if (dataGridView1.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Selecione uma linha de cadastro para excluir.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Selecione um cadastro para excluir.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -329,6 +333,8 @@ namespace Carros
 
         private void button7_Click(object sender, EventArgs e)
         {
+            // Adicionar algo novo na lista das comboBoxes
+            //e da uma mensagem de erro caso escreva algo igual que já tenha na lista
             string newItem = Microsoft.VisualBasic.Interaction.InputBox("Digite a marca do seu carro:", "Adicionar item");
             if (!string.IsNullOrEmpty(newItem))
             {
@@ -430,6 +436,21 @@ namespace Carros
                     comboBox7.SelectedItem = newItem;
                     MessageBox.Show("O item foi adicionado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+            }
+        }
+        private void label18_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                lastPoint = new Point(e.X, e.Y);
+            }
+        }
+        private void label18_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - lastPoint.X;
+                this.Top += e.Y - lastPoint.Y;
             }
         }
     }
