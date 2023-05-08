@@ -8,9 +8,7 @@ namespace Carros
 {
     internal static class Program
     {
-        /// <summary>
-        /// Ponto de entrada principal para o aplicativo.
-        /// </summary>
+        /// Ponto de entrada principal para o aplicativo.       
         [STAThread]
         static void Main()
         {
