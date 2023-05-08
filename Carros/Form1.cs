@@ -8,6 +8,42 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using MySql.Data.MySqlClient;
+using Carros;
+
+string connectionString = "server=localhost;port=3306;database=bd_carros;uid=seuUsuario;password=suaSenha";
+    MySqlConnection connection = new MySqlConnection(connectionString);
+    connection.Open();
+
+    // Exemplo de consulta na tabela carros
+    string query = "SELECT * FROM carros";
+    MySqlCommand command = new MySqlCommand(query, connection);
+    MySqlDataReader reader = command.ExecuteReader();
+
+    // Exibir os resultados na dataGridView
+    while (reader.Read())
+    {
+        dataGridView1.Rows.Add(
+            reader["ID"],
+            reader["Marca"],
+            reader["Modelo"],
+            reader["Fabricante"],
+            reader["Tipo"],
+            reader["Ano"],
+            reader["Combustivel"],
+            reader["Cor"],
+            reader["NumChassi"],
+            reader["Kilometragem"],
+            reader["Revisao"],
+            reader["Sinistro"],
+            reader["RouboFurto"],
+            reader["Aluguel"],
+            reader["Venda"],
+            reader["Particular"],
+            reader["Observacoes"]
+       );
+    }
+    connection.Close();
 
 namespace Carros
 {
@@ -452,6 +488,13 @@ namespace Carros
                 this.Left += e.X - lastPoint.X;
                 this.Top += e.Y - lastPoint.Y;
             }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dataGridView1.AllowUserToAddRows = false; // impede o usuário de adicionar linhas manualmente
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill; // ajusta automaticamente o tamanho das colunas
+            dataGridView1.ReadOnly = true; // torna o DataGridView somente leitura
         }
     }
 }
