@@ -9,12 +9,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using Carros;
-using MySql.Data.MySqlClient;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
+using CarrosCS;
 
 namespace Carros
 {
     public partial class Form1 : Form
     {
+        private List<Carro> carros = new List<Carro>();
+        private BinaryFormatter formatter = new BinaryFormatter();
+        private string NomeArquivoBackup = "carro.dat";
+
         public Form1()
         {
             InitializeComponent();            
@@ -101,6 +107,10 @@ namespace Carros
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
+            CarregarCarros();
+            AtualizarDataGridView();
+
             // Define o valor inicial do ID como 1
             textBox1.Text = "1";
 
@@ -213,6 +223,8 @@ namespace Carros
 
         private void button2_Click(object sender, EventArgs e)
         {
+            // Atualiza a exibição da dataGridView1
+            AtualizarDataGridView();
 
             // Verifica se todos os campos obrigatórios foram preenchidos
             if (!Controls.OfType<System.Windows.Forms.TextBox>().Where(tb => tb != textBox11 && tb != textBox1).All(tb => !string.IsNullOrWhiteSpace(tb.Text)) ||
@@ -461,6 +473,118 @@ namespace Carros
             dataGridView1.AllowUserToAddRows = false; // impede o usuário de adicionar linhas manualmente
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill; // ajusta automaticamente o tamanho das colunas
             dataGridView1.ReadOnly = true; // torna o DataGridView somente leitura
+        }
+
+        private void SalvarCarros()
+        {
+            try
+            {
+                using (FileStream fileStream = new FileStream("carros.dat", FileMode.Create))
+                {
+                    formatter.Serialize(fileStream, carros);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao salvar o backup: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void CarregarCarros()
+        {
+            try
+            {
+                if (File.Exists("carros.dat"))
+                {
+                    using (FileStream fileStream = new FileStream("carros.dat", FileMode.Open))
+                    {
+                        carros = (List<Carro>)formatter.Deserialize(fileStream);
+                    }
+                }
+
+                // Atualiza a exibição dos dados na dataGridView
+                AtualizarDataGridView();              
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao carregar o backup: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void AtualizarDataGridView()
+        {
+            // Personaliza as colunas da dataGridView1
+            dataGridView1.Columns[1].HeaderText = "Marca";
+            dataGridView1.Columns[2].HeaderText = "Modelo";
+            dataGridView1.Columns[3].HeaderText = "Fabricante";
+            dataGridView1.Columns[4].HeaderText = "Tipo";
+            dataGridView1.Columns[5].HeaderText = "Ano";
+            dataGridView1.Columns[6].HeaderText = "Combustível";
+            dataGridView1.Columns[7].HeaderText = "Cor";
+            dataGridView1.Columns[8].HeaderText = "NºChassi";
+            dataGridView1.Columns[9].HeaderText = "Kilometragem";
+            dataGridView1.Columns[10].HeaderText = "Revisão";
+            dataGridView1.Columns[11].HeaderText = "Sinistro";
+            dataGridView1.Columns[12].HeaderText = "Roubo/Furto";
+            dataGridView1.Columns[13].HeaderText = "Aluguel";
+            dataGridView1.Columns[14].HeaderText = "Venda";
+            dataGridView1.Columns[15].HeaderText = "Particular";
+            dataGridView1.Columns[16].HeaderText = "Observações";
+        }
+
+        private void btnCarregarBackup_Click(object sender, EventArgs e)
+        {
+            string caminhoCompleto = Path.Combine(Directory.GetCurrentDirectory(), NomeArquivoBackup);
+            Console.WriteLine("Caminho do arquivo: " + caminhoCompleto);
+
+            if (File.Exists(caminhoCompleto))
+            {
+                try
+                {
+                    using (FileStream fileStream = new FileStream(caminhoCompleto, FileMode.Open))
+                    {
+                        carros = (List<Carro>)formatter.Deserialize(fileStream);
+                    }
+
+                    MessageBox.Show("Backup carregado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    AtualizarDataGridView();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao carregar o backup: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Nenhum backup encontrado.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void btnSalvarBackup_Click(object sender, EventArgs e)
+        {
+            string caminhoCompleto = Path.Combine(Directory.GetCurrentDirectory(), NomeArquivoBackup);
+            Console.WriteLine("Caminho do arquivo: " + caminhoCompleto);
+
+            if (!File.Exists(caminhoCompleto))
+            {
+                using (File.Create(caminhoCompleto))
+                {
+                    // Arquivo criado com sucesso
+                }
+            }
+
+            try
+            {
+                using (FileStream fileStream = new FileStream(caminhoCompleto, FileMode.OpenOrCreate))
+                {
+                    formatter.Serialize(fileStream, carros);
+                }
+
+                MessageBox.Show("Backup salvo com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao salvar o backup: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

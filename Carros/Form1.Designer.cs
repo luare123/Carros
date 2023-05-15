@@ -113,6 +113,8 @@
             this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
+            this.btnSalvarBackup = new System.Windows.Forms.Button();
+            this.btnCarregarBackup = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -970,12 +972,34 @@
             this.label19.TabIndex = 58;
             this.label19.Text = "Copyright© 2023 Luar Botelho.";
             // 
+            // btnSalvarBackup
+            // 
+            this.btnSalvarBackup.Location = new System.Drawing.Point(986, 196);
+            this.btnSalvarBackup.Name = "btnSalvarBackup";
+            this.btnSalvarBackup.Size = new System.Drawing.Size(112, 23);
+            this.btnSalvarBackup.TabIndex = 59;
+            this.btnSalvarBackup.Text = "Salvar Backup";
+            this.btnSalvarBackup.UseVisualStyleBackColor = true;
+            this.btnSalvarBackup.Click += new System.EventHandler(this.btnSalvarBackup_Click);
+            // 
+            // btnCarregarBackup
+            // 
+            this.btnCarregarBackup.Location = new System.Drawing.Point(1125, 196);
+            this.btnCarregarBackup.Name = "btnCarregarBackup";
+            this.btnCarregarBackup.Size = new System.Drawing.Size(150, 23);
+            this.btnCarregarBackup.TabIndex = 60;
+            this.btnCarregarBackup.Text = "Carregar Backup";
+            this.btnCarregarBackup.UseVisualStyleBackColor = true;
+            this.btnCarregarBackup.Click += new System.EventHandler(this.btnCarregarBackup_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.ClientSize = new System.Drawing.Size(1326, 690);
+            this.Controls.Add(this.btnCarregarBackup);
+            this.Controls.Add(this.btnSalvarBackup);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.button12);
             this.Controls.Add(this.button11);
@@ -1109,6 +1133,8 @@
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Button btnSalvarBackup;
+        private System.Windows.Forms.Button btnCarregarBackup;
     }
 }
 
