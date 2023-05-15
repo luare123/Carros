@@ -79,23 +79,6 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.id_veiculo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.modelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fabricante = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ano = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.combustivel = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numerochassi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kilometragem = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.revisao = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.sinistro = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.roubo_furto = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.alugel = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.venda = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.particular = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.observacoes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
@@ -115,6 +98,23 @@
             this.label19 = new System.Windows.Forms.Label();
             this.btnSalvarBackup = new System.Windows.Forms.Button();
             this.btnCarregarBackup = new System.Windows.Forms.Button();
+            this.id_veiculo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.modelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fabricante = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ano = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.combustivel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NumChassi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kilometragem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.revisao = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.sinistro = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.roubo_furto = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.alugel = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.venda = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.particular = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.observacoes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -187,7 +187,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(189, 29);
             this.label7.TabIndex = 8;
-            this.label7.Text = "Numero do Chassi";
+            this.label7.Text = "Número do Chassi";
             // 
             // label8
             // 
@@ -284,9 +284,9 @@
             this.label14.Font = new System.Drawing.Font("Comic Sans MS", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(1100, 115);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(132, 29);
+            this.label14.Size = new System.Drawing.Size(135, 29);
             this.label14.TabIndex = 22;
-            this.label14.Text = "Roubo/Furto";
+            this.label14.Text = "Roubo_Furto";
             // 
             // label15
             // 
@@ -470,7 +470,7 @@
             this.ano,
             this.combustivel,
             this.cor,
-            this.numerochassi,
+            this.NumChassi,
             this.kilometragem,
             this.revisao,
             this.sinistro,
@@ -493,156 +493,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(1294, 303);
             this.dataGridView1.TabIndex = 38;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // id_veiculo
-            // 
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.id_veiculo.DefaultCellStyle = dataGridViewCellStyle1;
-            this.id_veiculo.HeaderText = "ID";
-            this.id_veiculo.Name = "id_veiculo";
-            this.id_veiculo.ReadOnly = true;
-            // 
-            // marca
-            // 
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
-            this.marca.DefaultCellStyle = dataGridViewCellStyle2;
-            this.marca.HeaderText = "Marca";
-            this.marca.Name = "marca";
-            this.marca.ReadOnly = true;
-            // 
-            // modelo
-            // 
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modelo.DefaultCellStyle = dataGridViewCellStyle3;
-            this.modelo.HeaderText = "Modelo";
-            this.modelo.Name = "modelo";
-            this.modelo.ReadOnly = true;
-            // 
-            // fabricante
-            // 
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
-            this.fabricante.DefaultCellStyle = dataGridViewCellStyle4;
-            this.fabricante.HeaderText = "Fabricante";
-            this.fabricante.Name = "fabricante";
-            this.fabricante.ReadOnly = true;
-            // 
-            // tipo
-            // 
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
-            this.tipo.DefaultCellStyle = dataGridViewCellStyle5;
-            this.tipo.HeaderText = "Tipo";
-            this.tipo.Name = "tipo";
-            this.tipo.ReadOnly = true;
-            // 
-            // ano
-            // 
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
-            this.ano.DefaultCellStyle = dataGridViewCellStyle6;
-            this.ano.HeaderText = "Ano";
-            this.ano.Name = "ano";
-            this.ano.ReadOnly = true;
-            // 
-            // combustivel
-            // 
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
-            this.combustivel.DefaultCellStyle = dataGridViewCellStyle7;
-            this.combustivel.HeaderText = "Combustível";
-            this.combustivel.Name = "combustivel";
-            this.combustivel.ReadOnly = true;
-            // 
-            // cor
-            // 
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
-            this.cor.DefaultCellStyle = dataGridViewCellStyle8;
-            this.cor.HeaderText = "Cor";
-            this.cor.Name = "cor";
-            this.cor.ReadOnly = true;
-            // 
-            // numerochassi
-            // 
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
-            this.numerochassi.DefaultCellStyle = dataGridViewCellStyle9;
-            this.numerochassi.HeaderText = "NºChassi";
-            this.numerochassi.Name = "numerochassi";
-            this.numerochassi.ReadOnly = true;
-            // 
-            // kilometragem
-            // 
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
-            this.kilometragem.DefaultCellStyle = dataGridViewCellStyle10;
-            this.kilometragem.HeaderText = "Kilometragem";
-            this.kilometragem.Name = "kilometragem";
-            this.kilometragem.ReadOnly = true;
-            // 
-            // revisao
-            // 
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle11.NullValue = false;
-            this.revisao.DefaultCellStyle = dataGridViewCellStyle11;
-            this.revisao.HeaderText = "Revisão";
-            this.revisao.Name = "revisao";
-            this.revisao.ReadOnly = true;
-            // 
-            // sinistro
-            // 
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.NullValue = false;
-            this.sinistro.DefaultCellStyle = dataGridViewCellStyle12;
-            this.sinistro.HeaderText = "Sinistro";
-            this.sinistro.Name = "sinistro";
-            this.sinistro.ReadOnly = true;
-            // 
-            // roubo_furto
-            // 
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle13.NullValue = false;
-            this.roubo_furto.DefaultCellStyle = dataGridViewCellStyle13;
-            this.roubo_furto.HeaderText = "Roubo/Furto";
-            this.roubo_furto.Name = "roubo_furto";
-            this.roubo_furto.ReadOnly = true;
-            // 
-            // alugel
-            // 
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle14.NullValue = false;
-            this.alugel.DefaultCellStyle = dataGridViewCellStyle14;
-            this.alugel.HeaderText = "Aluguel";
-            this.alugel.Name = "alugel";
-            this.alugel.ReadOnly = true;
-            // 
-            // venda
-            // 
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle15.NullValue = false;
-            this.venda.DefaultCellStyle = dataGridViewCellStyle15;
-            this.venda.HeaderText = "Venda";
-            this.venda.Name = "venda";
-            this.venda.ReadOnly = true;
-            this.venda.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.venda.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // particular
-            // 
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle16.NullValue = false;
-            this.particular.DefaultCellStyle = dataGridViewCellStyle16;
-            this.particular.HeaderText = "Particular";
-            this.particular.Name = "particular";
-            this.particular.ReadOnly = true;
-            // 
-            // observacoes
-            // 
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
-            this.observacoes.DefaultCellStyle = dataGridViewCellStyle17;
-            this.observacoes.HeaderText = "Observações";
-            this.observacoes.Name = "observacoes";
-            this.observacoes.ReadOnly = true;
             // 
             // comboBox4
             // 
@@ -992,6 +842,156 @@
             this.btnCarregarBackup.UseVisualStyleBackColor = true;
             this.btnCarregarBackup.Click += new System.EventHandler(this.btnCarregarBackup_Click);
             // 
+            // id_veiculo
+            // 
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.id_veiculo.DefaultCellStyle = dataGridViewCellStyle1;
+            this.id_veiculo.HeaderText = "ID";
+            this.id_veiculo.Name = "id_veiculo";
+            this.id_veiculo.ReadOnly = true;
+            // 
+            // marca
+            // 
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
+            this.marca.DefaultCellStyle = dataGridViewCellStyle2;
+            this.marca.HeaderText = "Marca";
+            this.marca.Name = "marca";
+            this.marca.ReadOnly = true;
+            // 
+            // modelo
+            // 
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modelo.DefaultCellStyle = dataGridViewCellStyle3;
+            this.modelo.HeaderText = "Modelo";
+            this.modelo.Name = "modelo";
+            this.modelo.ReadOnly = true;
+            // 
+            // fabricante
+            // 
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
+            this.fabricante.DefaultCellStyle = dataGridViewCellStyle4;
+            this.fabricante.HeaderText = "Fabricante";
+            this.fabricante.Name = "fabricante";
+            this.fabricante.ReadOnly = true;
+            // 
+            // tipo
+            // 
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
+            this.tipo.DefaultCellStyle = dataGridViewCellStyle5;
+            this.tipo.HeaderText = "Tipo";
+            this.tipo.Name = "tipo";
+            this.tipo.ReadOnly = true;
+            // 
+            // ano
+            // 
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
+            this.ano.DefaultCellStyle = dataGridViewCellStyle6;
+            this.ano.HeaderText = "Ano";
+            this.ano.Name = "ano";
+            this.ano.ReadOnly = true;
+            // 
+            // combustivel
+            // 
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
+            this.combustivel.DefaultCellStyle = dataGridViewCellStyle7;
+            this.combustivel.HeaderText = "Combustível";
+            this.combustivel.Name = "combustivel";
+            this.combustivel.ReadOnly = true;
+            // 
+            // cor
+            // 
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
+            this.cor.DefaultCellStyle = dataGridViewCellStyle8;
+            this.cor.HeaderText = "Cor";
+            this.cor.Name = "cor";
+            this.cor.ReadOnly = true;
+            // 
+            // NumChassi
+            // 
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
+            this.NumChassi.DefaultCellStyle = dataGridViewCellStyle9;
+            this.NumChassi.HeaderText = "NumChassi";
+            this.NumChassi.Name = "NumChassi";
+            this.NumChassi.ReadOnly = true;
+            // 
+            // kilometragem
+            // 
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
+            this.kilometragem.DefaultCellStyle = dataGridViewCellStyle10;
+            this.kilometragem.HeaderText = "Kilometragem";
+            this.kilometragem.Name = "kilometragem";
+            this.kilometragem.ReadOnly = true;
+            // 
+            // revisao
+            // 
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle11.NullValue = false;
+            this.revisao.DefaultCellStyle = dataGridViewCellStyle11;
+            this.revisao.HeaderText = "Revisão";
+            this.revisao.Name = "revisao";
+            this.revisao.ReadOnly = true;
+            // 
+            // sinistro
+            // 
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.NullValue = false;
+            this.sinistro.DefaultCellStyle = dataGridViewCellStyle12;
+            this.sinistro.HeaderText = "Sinistro";
+            this.sinistro.Name = "sinistro";
+            this.sinistro.ReadOnly = true;
+            // 
+            // roubo_furto
+            // 
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle13.NullValue = false;
+            this.roubo_furto.DefaultCellStyle = dataGridViewCellStyle13;
+            this.roubo_furto.HeaderText = "Roubo_Furto";
+            this.roubo_furto.Name = "roubo_furto";
+            this.roubo_furto.ReadOnly = true;
+            // 
+            // alugel
+            // 
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle14.NullValue = false;
+            this.alugel.DefaultCellStyle = dataGridViewCellStyle14;
+            this.alugel.HeaderText = "Aluguel";
+            this.alugel.Name = "alugel";
+            this.alugel.ReadOnly = true;
+            // 
+            // venda
+            // 
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle15.NullValue = false;
+            this.venda.DefaultCellStyle = dataGridViewCellStyle15;
+            this.venda.HeaderText = "Venda";
+            this.venda.Name = "venda";
+            this.venda.ReadOnly = true;
+            this.venda.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.venda.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // particular
+            // 
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle16.NullValue = false;
+            this.particular.DefaultCellStyle = dataGridViewCellStyle16;
+            this.particular.HeaderText = "Particular";
+            this.particular.Name = "particular";
+            this.particular.ReadOnly = true;
+            // 
+            // observacoes
+            // 
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
+            this.observacoes.DefaultCellStyle = dataGridViewCellStyle17;
+            this.observacoes.HeaderText = "Observações";
+            this.observacoes.Name = "observacoes";
+            this.observacoes.ReadOnly = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1109,23 +1109,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id_veiculo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn marca;
-        private System.Windows.Forms.DataGridViewTextBoxColumn modelo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fabricante;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tipo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ano;
-        private System.Windows.Forms.DataGridViewTextBoxColumn combustivel;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numerochassi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kilometragem;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn revisao;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn sinistro;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn roubo_furto;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn alugel;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn venda;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn particular;
-        private System.Windows.Forms.DataGridViewTextBoxColumn observacoes;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
@@ -1135,6 +1118,23 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Button btnSalvarBackup;
         private System.Windows.Forms.Button btnCarregarBackup;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_veiculo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn marca;
+        private System.Windows.Forms.DataGridViewTextBoxColumn modelo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fabricante;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ano;
+        private System.Windows.Forms.DataGridViewTextBoxColumn combustivel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NumChassi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kilometragem;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn revisao;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn sinistro;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn roubo_furto;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn alugel;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn venda;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn particular;
+        private System.Windows.Forms.DataGridViewTextBoxColumn observacoes;
     }
 }
 

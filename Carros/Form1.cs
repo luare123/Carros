@@ -11,16 +11,13 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using Carros;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
-using CarrosCS;
+using System.Xml.Serialization;
 
 namespace Carros
 {
     public partial class Form1 : Form
     {
         private List<Carro> carros = new List<Carro>();
-        private BinaryFormatter formatter = new BinaryFormatter();
-        private string NomeArquivoBackup = "carro.dat";
-
         public Form1()
         {
             InitializeComponent();            
@@ -107,10 +104,6 @@ namespace Carros
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
-            CarregarCarros();
-            AtualizarDataGridView();
-
             // Define o valor inicial do ID como 1
             textBox1.Text = "1";
 
@@ -223,9 +216,6 @@ namespace Carros
 
         private void button2_Click(object sender, EventArgs e)
         {
-            // Atualiza a exibição da dataGridView1
-            AtualizarDataGridView();
-
             // Verifica se todos os campos obrigatórios foram preenchidos
             if (!Controls.OfType<System.Windows.Forms.TextBox>().Where(tb => tb != textBox11 && tb != textBox1).All(tb => !string.IsNullOrWhiteSpace(tb.Text)) ||
                 !Controls.OfType<System.Windows.Forms.ComboBox>().All(cb => cb.SelectedItem != null))
@@ -473,117 +463,106 @@ namespace Carros
             dataGridView1.AllowUserToAddRows = false; // impede o usuário de adicionar linhas manualmente
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill; // ajusta automaticamente o tamanho das colunas
             dataGridView1.ReadOnly = true; // torna o DataGridView somente leitura
-        }
+        }      
 
-        private void SalvarCarros()
+        private void btnSalvarBackup_Click(object sender, EventArgs e)
         {
-            try
+            List<Carro> carrosBackup = new List<Carro>();
+
+            foreach (DataGridViewRow linha in dataGridView1.Rows)
             {
-                using (FileStream fileStream = new FileStream("carros.dat", FileMode.Create))
+                if (!linha.IsNewRow)
                 {
-                    formatter.Serialize(fileStream, carros);
+                    Carro carro = new Carro();
+                    carro.Marca = linha.Cells["Marca"].Value?.ToString();
+                    carro.Modelo = linha.Cells["Modelo"].Value?.ToString();
+                    carro.Fabricante = linha.Cells["Fabricante"].Value?.ToString();
+                    carro.Tipo = linha.Cells["Tipo"].Value?.ToString();
+                    carro.Ano = Convert.ToInt32(linha.Cells["Ano"].Value);
+                    carro.Combustível = linha.Cells["Combustivel"].Value?.ToString();
+                    carro.Cor = linha.Cells["Cor"].Value?.ToString();
+                    carro.NumChassi = Convert.ToInt32(linha.Cells["NumChassi"].Value);
+                    carro.Kilometragem = Convert.ToInt32(linha.Cells["Kilometragem"].Value);
+                    carro.Revisão = Convert.ToBoolean(linha.Cells["Revisão"].Value).ToString();
+                    carro.Sinistro = Convert.ToBoolean(linha.Cells["Sinistro"].Value).ToString();
+                    carro.Roubo_Furto = Convert.ToBoolean(linha.Cells["Roubo_Furto"].Value).ToString();
+                    carro.Aluguel = Convert.ToBoolean(linha.Cells["Aluguel"].Value).ToString();
+                    carro.Venda = Convert.ToBoolean(linha.Cells["Venda"].Value).ToString();
+                    carro.Particular = Convert.ToBoolean(linha.Cells["Particular"].Value).ToString();
+                    carro.Observações = linha.Cells["Observações"].Value?.ToString();
+
+                    carrosBackup.Add(carro);
                 }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro ao salvar o backup: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
 
-        private void CarregarCarros()
-        {
-            try
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Arquivos XML|*.xml";
+
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
-                if (File.Exists("carros.dat"))
+                string filePath = saveFileDialog.FileName;
+
+                using (var streamWriter = new StreamWriter(filePath))
                 {
-                    using (FileStream fileStream = new FileStream("carros.dat", FileMode.Open))
-                    {
-                        carros = (List<Carro>)formatter.Deserialize(fileStream);
-                    }
+                    var serializer = new XmlSerializer(typeof(List<Carro>));
+                    serializer.Serialize(streamWriter, carrosBackup);
                 }
 
-                // Atualiza a exibição dos dados na dataGridView
-                AtualizarDataGridView();              
+                MessageBox.Show("Backup salvo com sucesso.", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro ao carregar o backup: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void AtualizarDataGridView()
-        {
-            // Personaliza as colunas da dataGridView1
-            dataGridView1.Columns[1].HeaderText = "Marca";
-            dataGridView1.Columns[2].HeaderText = "Modelo";
-            dataGridView1.Columns[3].HeaderText = "Fabricante";
-            dataGridView1.Columns[4].HeaderText = "Tipo";
-            dataGridView1.Columns[5].HeaderText = "Ano";
-            dataGridView1.Columns[6].HeaderText = "Combustível";
-            dataGridView1.Columns[7].HeaderText = "Cor";
-            dataGridView1.Columns[8].HeaderText = "NºChassi";
-            dataGridView1.Columns[9].HeaderText = "Kilometragem";
-            dataGridView1.Columns[10].HeaderText = "Revisão";
-            dataGridView1.Columns[11].HeaderText = "Sinistro";
-            dataGridView1.Columns[12].HeaderText = "Roubo/Furto";
-            dataGridView1.Columns[13].HeaderText = "Aluguel";
-            dataGridView1.Columns[14].HeaderText = "Venda";
-            dataGridView1.Columns[15].HeaderText = "Particular";
-            dataGridView1.Columns[16].HeaderText = "Observações";
         }
 
         private void btnCarregarBackup_Click(object sender, EventArgs e)
         {
-            string caminhoCompleto = Path.Combine(Directory.GetCurrentDirectory(), NomeArquivoBackup);
-            Console.WriteLine("Caminho do arquivo: " + caminhoCompleto);
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Arquivos XML (*.xml)|*.xml";
+            openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
 
-            if (File.Exists(caminhoCompleto))
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
+                string filePath = openFileDialog.FileName;
+
                 try
                 {
-                    using (FileStream fileStream = new FileStream(caminhoCompleto, FileMode.Open))
+                    XmlSerializer serializer = new XmlSerializer(typeof(List<Carro>));
+                    using (StreamReader reader = new StreamReader(filePath))
                     {
-                        carros = (List<Carro>)formatter.Deserialize(fileStream);
-                    }
+                        List<Carro> carrosBackup = (List<Carro>)serializer.Deserialize(reader);
 
-                    MessageBox.Show("Backup carregado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    AtualizarDataGridView();
+                        // Limpa a dataGridView
+                        dataGridView1.Rows.Clear();
+
+                        // Preenche a dataGridView com os dados carregados
+                        foreach (Carro carro in carrosBackup)
+                        {
+                            dataGridView1.Rows.Add(
+                                carro.ID,
+                                carro.Marca,
+                                carro.Modelo,
+                                carro.Fabricante,
+                                carro.Tipo,
+                                carro.Ano,
+                                carro.Combustível,
+                                carro.Cor,
+                                carro.NumChassi,
+                                carro.Kilometragem,
+                                carro.Revisão,
+                                carro.Sinistro,
+                                carro.Roubo_Furto,
+                                carro.Aluguel,
+                                carro.Venda,
+                                carro.Particular,
+                                carro.Observações
+                            );
+                        }
+
+                        MessageBox.Show("Backup carregado com sucesso.", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Erro ao carregar o backup: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            }
-            else
-            {
-                MessageBox.Show("Nenhum backup encontrado.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        private void btnSalvarBackup_Click(object sender, EventArgs e)
-        {
-            string caminhoCompleto = Path.Combine(Directory.GetCurrentDirectory(), NomeArquivoBackup);
-            Console.WriteLine("Caminho do arquivo: " + caminhoCompleto);
-
-            if (!File.Exists(caminhoCompleto))
-            {
-                using (File.Create(caminhoCompleto))
-                {
-                    // Arquivo criado com sucesso
-                }
-            }
-
-            try
-            {
-                using (FileStream fileStream = new FileStream(caminhoCompleto, FileMode.OpenOrCreate))
-                {
-                    formatter.Serialize(fileStream, carros);
-                }
-
-                MessageBox.Show("Backup salvo com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro ao salvar o backup: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

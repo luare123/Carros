@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CarrosCS
+namespace Carros
 {
     [Serializable]
     public class Carro
@@ -16,17 +15,16 @@ namespace CarrosCS
         public string Fabricante { get; set; }
         public string Tipo { get; set; }
         public int Ano { get; set; }
-        public string Combustivel { get; set; }
+        public string Combustível { get; set; }
         public string Cor { get; set; }
-        public string NºChassi { get; set; }
+        public int NumChassi { get; set; }
         public int Kilometragem { get; set; }
-        public bool Revisao { get; set; }
-        public bool Sinistro { get; set; }
-        public bool RouboFurto { get; set; }
-        public bool Aluguel { get; set; }
-        public bool Venda { get; set; }
-        public bool Particular { get; set; }
-        public string Observacoes { get; set; }
+        public string Revisão { get; set; }
+        public string Sinistro { get; set; }
+        public string Roubo_Furto { get; set; }
+        public string Aluguel { get; set; }
+        public string Venda { get; set; }
+        public string Particular { get; set; }
+        public string Observações { get; set; }
     }
 }
-
