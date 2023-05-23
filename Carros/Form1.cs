@@ -77,7 +77,7 @@ namespace Carros
             }
             else
             {
-                MessageBox.Show("Campos limpos!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Campo(s) limpos!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
         }
@@ -293,26 +293,6 @@ namespace Carros
                 Location = new Point(Location.X + delta.X, Location.Y + delta.Y);
                 lastMousePosition = Control.MousePosition;
             }
-        }
-
-        private Point lastPoint;
-        private void pictureBox2_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                this.Left += e.X - lastPoint.X;
-                this.Top += e.Y - lastPoint.Y;
-            }
-        }
-
-        private void pictureBox2_MouseDown(object sender, MouseEventArgs e)
-        {
-            lastPoint = new Point(e.X, e.Y);
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -574,6 +554,21 @@ namespace Carros
                 }
             }
 
+        }
+
+        private Point lastPoint;
+        private void pictureBox2_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - lastPoint.X;
+                this.Top += e.Y - lastPoint.Y;
+            }
+        }
+
+        private void pictureBox2_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastPoint = new Point(e.X, e.Y);
         }
     }
 }
