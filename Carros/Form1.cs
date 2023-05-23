@@ -481,15 +481,15 @@ namespace Carros
                     carro.Ano = Convert.ToInt32(linha.Cells["Ano"].Value);
                     carro.Combustível = linha.Cells["Combustivel"].Value?.ToString();
                     carro.Cor = linha.Cells["Cor"].Value?.ToString();
-                    carro.NumChassi = Convert.ToInt32(linha.Cells["NumChassi"].Value);
+                    carro.NumChassi = Convert.ToInt64(linha.Cells["NumChassi"].Value);
                     carro.Kilometragem = Convert.ToInt32(linha.Cells["Kilometragem"].Value);
-                    carro.Revisão = Convert.ToBoolean(linha.Cells["Revisão"].Value).ToString();
+                    carro.Revisão = Convert.ToBoolean(linha.Cells["Revisao"].Value).ToString();
                     carro.Sinistro = Convert.ToBoolean(linha.Cells["Sinistro"].Value).ToString();
                     carro.Roubo_Furto = Convert.ToBoolean(linha.Cells["Roubo_Furto"].Value).ToString();
-                    carro.Aluguel = Convert.ToBoolean(linha.Cells["Aluguel"].Value).ToString();
+                    carro.Aluguel = linha.Cells["Aluguel"].Value?.ToString();
                     carro.Venda = Convert.ToBoolean(linha.Cells["Venda"].Value).ToString();
                     carro.Particular = Convert.ToBoolean(linha.Cells["Particular"].Value).ToString();
-                    carro.Observações = linha.Cells["Observações"].Value?.ToString();
+                    carro.Observações = linha.Cells["Observacoes"].Value?.ToString();
 
                     carrosBackup.Add(carro);
                 }

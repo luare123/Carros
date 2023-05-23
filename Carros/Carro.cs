@@ -17,7 +17,7 @@ namespace Carros
         public int Ano { get; set; }
         public string Combustível { get; set; }
         public string Cor { get; set; }
-        public int NumChassi { get; set; }
+        public long NumChassi { get; set; }
         public int Kilometragem { get; set; }
         public string Revisão { get; set; }
         public string Sinistro { get; set; }
