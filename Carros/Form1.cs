@@ -529,31 +529,40 @@ namespace Carros
                     {
                         List<Carro> carrosBackup = (List<Carro>)serializer.Deserialize(reader);
 
+                        // Obtém o ID máximo dos carros existentes na coleção atual
+                        int maxID = carros.Any() ? carros.Max(c => c.ID) : 0;
+
                         // Limpa a dataGridView
                         dataGridView1.Rows.Clear();
 
                         // Preenche a dataGridView com os dados carregados
                         foreach (Carro carro in carrosBackup)
                         {
-                            dataGridView1.Rows.Add(
-                                carro.ID,
-                                carro.Marca,
-                                carro.Modelo,
-                                carro.Fabricante,
-                                carro.Tipo,
-                                carro.Ano,
-                                carro.Combustível,
-                                carro.Cor,
-                                carro.NumChassi,
-                                carro.Kilometragem,
-                                carro.Revisão,
-                                carro.Sinistro,
-                                carro.Roubo_Furto,
-                                carro.Aluguel,
-                                carro.Venda,
-                                carro.Particular,
-                                carro.Observações
-                            );
+                            // Incrementa o ID para evitar conflitos com carros existentes
+                            maxID++;
+                            carro.ID = maxID;
+
+                            DataGridViewRow novaLinha = new DataGridViewRow();
+                            novaLinha.CreateCells(dataGridView1);
+                            novaLinha.Cells[0].Value = carro.ID;
+                            novaLinha.Cells[1].Value = carro.Marca;
+                            novaLinha.Cells[2].Value = carro.Modelo;
+                            novaLinha.Cells[3].Value = carro.Fabricante;
+                            novaLinha.Cells[4].Value = carro.Tipo;
+                            novaLinha.Cells[5].Value = carro.Ano;
+                            novaLinha.Cells[6].Value = carro.Combustível.ToString();
+                            novaLinha.Cells[7].Value = carro.Cor;
+                            novaLinha.Cells[8].Value = carro.NumChassi.ToString();
+                            novaLinha.Cells[9].Value = carro.Kilometragem.ToString();
+                            novaLinha.Cells[10].Value = carro.Revisão.ToString();
+                            novaLinha.Cells[11].Value = carro.Sinistro.ToString();
+                            novaLinha.Cells[12].Value = carro.Roubo_Furto.ToString();
+                            novaLinha.Cells[13].Value = carro.Aluguel.ToString();
+                            novaLinha.Cells[14].Value = carro.Venda.ToString();
+                            novaLinha.Cells[15].Value = carro.Particular.ToString();
+                            novaLinha.Cells[16].Value = carro.Observações;
+
+                            dataGridView1.Rows.Add(novaLinha);
                         }
 
                         MessageBox.Show("Backup carregado com sucesso.", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -564,6 +573,7 @@ namespace Carros
                     MessageBox.Show("Erro ao carregar o backup: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+
         }
     }
 }

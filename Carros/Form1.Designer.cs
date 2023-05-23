@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -45,7 +45,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -111,8 +110,8 @@
             this.revisao = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.sinistro = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.roubo_furto = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.alugel = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.venda = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Aluguel = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.particular = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.observacoes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -475,18 +474,18 @@
             this.revisao,
             this.sinistro,
             this.roubo_furto,
-            this.alugel,
             this.venda,
+            this.Aluguel,
             this.particular,
             this.observacoes});
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle17;
             this.dataGridView1.Location = new System.Drawing.Point(17, 353);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -952,42 +951,38 @@
             this.roubo_furto.Name = "roubo_furto";
             this.roubo_furto.ReadOnly = true;
             // 
-            // alugel
+            // venda
             // 
             dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle14.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle14.NullValue = false;
-            this.alugel.DefaultCellStyle = dataGridViewCellStyle14;
-            this.alugel.HeaderText = "Aluguel";
-            this.alugel.Name = "alugel";
-            this.alugel.ReadOnly = true;
-            // 
-            // venda
-            // 
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle15.NullValue = false;
-            this.venda.DefaultCellStyle = dataGridViewCellStyle15;
+            this.venda.DefaultCellStyle = dataGridViewCellStyle14;
             this.venda.HeaderText = "Venda";
             this.venda.Name = "venda";
             this.venda.ReadOnly = true;
             this.venda.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.venda.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
+            // Aluguel
+            // 
+            this.Aluguel.HeaderText = "Aluguel";
+            this.Aluguel.Name = "Aluguel";
+            this.Aluguel.ReadOnly = true;
+            // 
             // particular
             // 
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle16.NullValue = false;
-            this.particular.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle15.NullValue = false;
+            this.particular.DefaultCellStyle = dataGridViewCellStyle15;
             this.particular.HeaderText = "Particular";
             this.particular.Name = "particular";
             this.particular.ReadOnly = true;
             // 
             // observacoes
             // 
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
-            this.observacoes.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
+            this.observacoes.DefaultCellStyle = dataGridViewCellStyle16;
             this.observacoes.HeaderText = "Observações";
             this.observacoes.Name = "observacoes";
             this.observacoes.ReadOnly = true;
@@ -1131,8 +1126,8 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn revisao;
         private System.Windows.Forms.DataGridViewCheckBoxColumn sinistro;
         private System.Windows.Forms.DataGridViewCheckBoxColumn roubo_furto;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn alugel;
         private System.Windows.Forms.DataGridViewCheckBoxColumn venda;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Aluguel;
         private System.Windows.Forms.DataGridViewCheckBoxColumn particular;
         private System.Windows.Forms.DataGridViewTextBoxColumn observacoes;
     }
