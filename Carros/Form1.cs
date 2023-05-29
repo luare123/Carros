@@ -474,7 +474,6 @@ namespace Carros
                     carrosBackup.Add(carro);
                 }
             }
-
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.Filter = "Arquivos XML|*.xml";
 
@@ -515,8 +514,7 @@ namespace Carros
                         // Limpa a dataGridView
                         dataGridView1.Rows.Clear();
 
-                        // Preenche a dataGridView com os dados carregados
-                        foreach (Carro carro in carrosBackup)
+                        foreach (Carro carro in carrosBackup) // Preenche a dataGridView com os dados carregados
                         {
                             // Incrementa o ID para evitar conflitos com carros existentes
                             maxID++;

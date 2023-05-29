@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle85 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle69 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle70 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle71 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle72 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle73 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle74 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle75 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle76 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle77 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle78 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle79 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle80 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle81 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle82 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle83 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle84 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -477,14 +477,14 @@
             this.Aluguel,
             this.particular,
             this.observacoes});
-            dataGridViewCellStyle85.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle85.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle85.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle85.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle85.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle85.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle85.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle85;
+            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle34.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle34.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle34.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle34;
             this.dataGridView1.Location = new System.Drawing.Point(246, 571);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -494,120 +494,120 @@
             // 
             // id_veiculo
             // 
-            dataGridViewCellStyle69.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.id_veiculo.DefaultCellStyle = dataGridViewCellStyle69;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.id_veiculo.DefaultCellStyle = dataGridViewCellStyle18;
             this.id_veiculo.HeaderText = "ID";
             this.id_veiculo.Name = "id_veiculo";
             this.id_veiculo.ReadOnly = true;
             // 
             // marca
             // 
-            dataGridViewCellStyle70.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
-            this.marca.DefaultCellStyle = dataGridViewCellStyle70;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
+            this.marca.DefaultCellStyle = dataGridViewCellStyle19;
             this.marca.HeaderText = "Marca";
             this.marca.Name = "marca";
             this.marca.ReadOnly = true;
             // 
             // modelo
             // 
-            dataGridViewCellStyle71.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modelo.DefaultCellStyle = dataGridViewCellStyle71;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modelo.DefaultCellStyle = dataGridViewCellStyle20;
             this.modelo.HeaderText = "Modelo";
             this.modelo.Name = "modelo";
             this.modelo.ReadOnly = true;
             // 
             // fabricante
             // 
-            dataGridViewCellStyle72.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
-            this.fabricante.DefaultCellStyle = dataGridViewCellStyle72;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
+            this.fabricante.DefaultCellStyle = dataGridViewCellStyle21;
             this.fabricante.HeaderText = "Fabricante";
             this.fabricante.Name = "fabricante";
             this.fabricante.ReadOnly = true;
             // 
             // tipo
             // 
-            dataGridViewCellStyle73.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
-            this.tipo.DefaultCellStyle = dataGridViewCellStyle73;
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
+            this.tipo.DefaultCellStyle = dataGridViewCellStyle22;
             this.tipo.HeaderText = "Tipo";
             this.tipo.Name = "tipo";
             this.tipo.ReadOnly = true;
             // 
             // ano
             // 
-            dataGridViewCellStyle74.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
-            this.ano.DefaultCellStyle = dataGridViewCellStyle74;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
+            this.ano.DefaultCellStyle = dataGridViewCellStyle23;
             this.ano.HeaderText = "Ano";
             this.ano.Name = "ano";
             this.ano.ReadOnly = true;
             // 
             // combustivel
             // 
-            dataGridViewCellStyle75.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
-            this.combustivel.DefaultCellStyle = dataGridViewCellStyle75;
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
+            this.combustivel.DefaultCellStyle = dataGridViewCellStyle24;
             this.combustivel.HeaderText = "Combustível";
             this.combustivel.Name = "combustivel";
             this.combustivel.ReadOnly = true;
             // 
             // cor
             // 
-            dataGridViewCellStyle76.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
-            this.cor.DefaultCellStyle = dataGridViewCellStyle76;
+            dataGridViewCellStyle25.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
+            this.cor.DefaultCellStyle = dataGridViewCellStyle25;
             this.cor.HeaderText = "Cor";
             this.cor.Name = "cor";
             this.cor.ReadOnly = true;
             // 
             // NumChassi
             // 
-            dataGridViewCellStyle77.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
-            this.NumChassi.DefaultCellStyle = dataGridViewCellStyle77;
+            dataGridViewCellStyle26.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
+            this.NumChassi.DefaultCellStyle = dataGridViewCellStyle26;
             this.NumChassi.HeaderText = "NumChassi";
             this.NumChassi.Name = "NumChassi";
             this.NumChassi.ReadOnly = true;
             // 
             // kilometragem
             // 
-            dataGridViewCellStyle78.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
-            this.kilometragem.DefaultCellStyle = dataGridViewCellStyle78;
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
+            this.kilometragem.DefaultCellStyle = dataGridViewCellStyle27;
             this.kilometragem.HeaderText = "Kilometragem";
             this.kilometragem.Name = "kilometragem";
             this.kilometragem.ReadOnly = true;
             // 
             // revisao
             // 
-            dataGridViewCellStyle79.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle79.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle79.NullValue = false;
-            this.revisao.DefaultCellStyle = dataGridViewCellStyle79;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle28.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle28.NullValue = false;
+            this.revisao.DefaultCellStyle = dataGridViewCellStyle28;
             this.revisao.HeaderText = "Revisão";
             this.revisao.Name = "revisao";
             this.revisao.ReadOnly = true;
             // 
             // sinistro
             // 
-            dataGridViewCellStyle80.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle80.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle80.NullValue = false;
-            this.sinistro.DefaultCellStyle = dataGridViewCellStyle80;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle29.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle29.NullValue = false;
+            this.sinistro.DefaultCellStyle = dataGridViewCellStyle29;
             this.sinistro.HeaderText = "Sinistro";
             this.sinistro.Name = "sinistro";
             this.sinistro.ReadOnly = true;
             // 
             // roubo_furto
             // 
-            dataGridViewCellStyle81.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle81.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle81.NullValue = false;
-            this.roubo_furto.DefaultCellStyle = dataGridViewCellStyle81;
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle30.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle30.NullValue = false;
+            this.roubo_furto.DefaultCellStyle = dataGridViewCellStyle30;
             this.roubo_furto.HeaderText = "Roubo_Furto";
             this.roubo_furto.Name = "roubo_furto";
             this.roubo_furto.ReadOnly = true;
             // 
             // venda
             // 
-            dataGridViewCellStyle82.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle82.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle82.NullValue = false;
-            this.venda.DefaultCellStyle = dataGridViewCellStyle82;
+            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle31.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle31.NullValue = false;
+            this.venda.DefaultCellStyle = dataGridViewCellStyle31;
             this.venda.HeaderText = "Venda";
             this.venda.Name = "venda";
             this.venda.ReadOnly = true;
@@ -622,18 +622,18 @@
             // 
             // particular
             // 
-            dataGridViewCellStyle83.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle83.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle83.NullValue = false;
-            this.particular.DefaultCellStyle = dataGridViewCellStyle83;
+            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle32.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle32.NullValue = false;
+            this.particular.DefaultCellStyle = dataGridViewCellStyle32;
             this.particular.HeaderText = "Particular";
             this.particular.Name = "particular";
             this.particular.ReadOnly = true;
             // 
             // observacoes
             // 
-            dataGridViewCellStyle84.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
-            this.observacoes.DefaultCellStyle = dataGridViewCellStyle84;
+            dataGridViewCellStyle33.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
+            this.observacoes.DefaultCellStyle = dataGridViewCellStyle33;
             this.observacoes.HeaderText = "Observações";
             this.observacoes.Name = "observacoes";
             this.observacoes.ReadOnly = true;
@@ -806,11 +806,11 @@
             this.label18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(49)))));
             this.label18.Font = new System.Drawing.Font("Comic Sans MS", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(40)))), ((int)(((byte)(234)))));
-            this.label18.Location = new System.Drawing.Point(540, 9);
+            this.label18.Location = new System.Drawing.Point(598, 9);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(509, 51);
+            this.label18.Size = new System.Drawing.Size(441, 51);
             this.label18.TabIndex = 44;
-            this.label18.Text = "⚙️ Cadastro de Carros ⚙️";
+            this.label18.Text = "Cadastro de Carros ⚙️";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label18.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label18_MouseDown);
             this.label18.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label18_MouseMove);
