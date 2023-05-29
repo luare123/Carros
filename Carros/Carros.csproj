@@ -38,7 +38,7 @@
     </StartupObject>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>carroo.ico</ApplicationIcon>
+    <ApplicationIcon>carroVermelho.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BouncyCastle.Crypto, Version=1.9.0.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
@@ -142,8 +142,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="carroo.ico" />
+    <Content Include="carroVermelho.ico" />
     <Content Include="imagecarros.ico" />
     <Content Include="imagemCarrosCaminhao.ico" />
+    <Content Include="pngtree-vector-car-icon-png-image_515736.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
